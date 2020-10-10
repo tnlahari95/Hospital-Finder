@@ -155,28 +155,28 @@ body {
 }
 
 .subsection2 h2{
-  text-align:top;
+  text-align:center;
   text-decoration-line: underline;
 }
 
-div.slide-right{
-  width: 100%;
-  overflow:hidden;
+.ul li{
+  background-color:beige;
+  margin:5px;
 }
-div.slide-right p{
-  animation: alternate;
+
+.slide{
+  position: relative;
+  animation-name: para;
   animation-duration: 4s;
+  animation-direction:normal;
+  animation-timing-function:linear;
 }
-@keyframes slide-right {
-  from{
-    margin-right: 100%;
-    width:300%
-  }
-to{
-  margin-right:0%;
-  width:100%;
+
+@keyframes para {
+  from {margin-left: 0px;}
+  to {margin-left: 200px;}
 }
-}
+
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
