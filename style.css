@@ -33,12 +33,10 @@ body {
   background-color: rgb(71, 69, 68);
   padding: 10px;
   text-transform:uppercase;
-  
 }
 .side h2{
   text-align:center;
   color:#fff;
-
 }
 .home, .about, .services, .contact {
   background-color: #c7c6c6;
