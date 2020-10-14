@@ -1,3 +1,13 @@
+
+.main-header {
+  height:95px;
+  text-align: center;
+  background: rgba(27, 118, 223, 0.986);
+  padding-bottom: 8px;
+}
+.main-header h3{
+  color:rgba(27, 118, 223, 0.986);
+}
 h1 {text-align: center;}
     table {
       font-family: arial, sans-serif;
@@ -27,7 +37,7 @@ h1 {text-align: center;}
   height: 100px;
   padding: 10px;
   border: 3px solid green; 
-  background-color: rgba(27, 118, 223, 0.986);
+  background-color: rgba(177, 202, 204, 0.986);
 }
 
 footer {

@@ -13,12 +13,17 @@ body {
   height:95px;
   text-align: center;
   background: #666666;
-  padding-bottom: 8px;
+  padding-bottom: 5px;
 
 }
 .main-header h1{
   color:#fff;
 }
+
+.main-header h2{
+  color:#fff;
+}
+
 /* Column container */
 .flex-container {  
   display: flex;
