@@ -1,0 +1,29 @@
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyA0IHY3GNVtDjwXK2m-g0fT_P9Z8w5dVw4",
+    authDomain: "example-1a03c.firebaseapp.com",
+    databaseURL: "https://example-1a03c.firebaseio.com",
+    projectId: "example-1a03c",
+    storageBucket: "example-1a03c.appspot.com",
+    messagingSenderId: "1065252307266",
+    appId: "1:1065252307266:web:e1f153e54161461e0848db",
+    measurementId: "G-L42XJR8JQ4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  //firebase.analytics();
+ var ref = firebase.database().ref('covid-data');
+ ref.on('value', function (snap){
+
+    snap.forEach(function(childsnap){
+        console.log(Object.entries(snap.val().population));
+    })
+    
+
+ })
+  
+  </script>

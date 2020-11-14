@@ -17,7 +17,7 @@ function init() {
       
       `
     $("#apidata").html(apidata)
-  })
+  });
 
   var apiusdata = ``
   $.get(url, function (apiusdata) {
@@ -33,7 +33,7 @@ function init() {
       
       `
     $("#apidata").html(apidata)
-  })
+  });
 }
 
 

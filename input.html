@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+        <!--<script src="js/sample.js"></script>-->
+    </header>
+    <body>
+        <p>ZIP Code:</p>
+        <input type="number" id="zip"><br>
+        <p>Population:</p>
+        <input type="number" id="population"><br>
+        <p>Cases:</p>
+        <input type="number" id="cases"><br>
+        <p>Deaths:</p>
+        <input type="number" id="deaths"><br>
+        <p>Recovered:</p>
+        <input type="number" id="recovered"><br>
+    
+        <button type="button" onclick="inserdata()">Submit</button>
+      
+      <script>
+          
+//used inputdata project
+
+            var firebaseConfig = {
+                apiKey: "AIzaSyAet0hrfH3pIi8GoR3q6pVlrsfS3EIyXBI",
+                authDomain: "inputdata-b5a96.firebaseapp.com",
+                databaseURL: "https://inputdata-b5a96.firebaseio.com",
+                projectId: "inputdata-b5a96",
+                storageBucket: "inputdata-b5a96.appspot.com",
+                messagingSenderId: "235070617092",
+                appId: "1:235070617092:web:46ea1338a33f80dcade751",
+                measurementId: "G-1Q5C8P5KGD"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+           // firebase.analytics();
+          
+            function inserdata(){
+              var zipcode = document.getElementById("zip").value;
+              var population = document.getElementById("population").value;
+              var cases = document.getElementById("cases").value;
+              var deaths = document.getElementById("deaths").value;
+              var recovered = document.getElementById("recovered").value;
+
+              firebase.database().ref('user/'+zipcode).set({
+                  zipcode: zip,
+                  population: population,
+                  cases: cases,
+                  deaths: deaths,
+                  recovered: recovered
+              });
+            }
+
+      </script>
+    </body>
+    </html>

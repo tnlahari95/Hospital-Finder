@@ -5,23 +5,52 @@
 /* Style the body */
 body {
   font-family: 'Open-Sans' sans-serif;
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
+.main-body {
+  background-color: #606060; 
+}
 /* Header*/
 .main-header {
-  height:95px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
   background: #666666;
+  /* margin-bottom: 6px;
+  height:200px;
   padding-bottom: 5px;
-
+  margin:0;
+  padding:0;*/
 }
-.main-header h1{
-  color:#fff;
+
+.header-bar{
+  flex: 100%;
+  background-color: #666666; 
+  
+}
+.header-bar h1{
+  color:#000;
+  text-align:center;
+  margin:0;
+  padding:0;
+  padding-bottom: 30px; 
+}
+
+.login{
+  flex: 10%;
+  background-color: #c7c6c6;
 }
 
 .main-header h2{
   color:#fff;
+}
+
+.login p{
+  color:#000;
+  text-align:right;
+  padding:10px;
+  font-weight: bolder;
 }
 
 /* Column container */
@@ -73,7 +102,6 @@ body {
 }
 .showcase h3{
   text-align:center;
-  font-size:150px:
   margin:0;
   padding-bottom:20px;
 }
@@ -86,20 +114,24 @@ body {
   opacity:0.9;
 }
 
-.feedback{
+/*.feedback{
   flex:100%;
   height:150px;
-  background-color: lightgrey;
+  background-color: #606060;
   padding:20px;
-}
+}*/
 
 /* Footer */
 .footer {
   height: 50px;
-  background: #333;
-  padding: 15px;
-  color:#fff;
+  background-color: #606060;
+  margin: 0px;
+  padding: 0px;
+  padding-top:10px;
+  padding-bottom:10px;
+  color:#000;
   text-align: center;
+  font-weight: bolder;
 }
 /*About*/
 .flex-container-about{
@@ -160,7 +192,6 @@ body {
   text-decoration-line: underline;
   margin:0;
   padding-bottom:20px;
-  
 }
 
 ul, .subsection2{
@@ -187,6 +218,97 @@ li, .subsection2{
   animation-timing-function: linear;
 }
 
+/*Hospitalfinder*/
+.description{
+  border-style: solid;
+}
+.description p{
+  font-size: bolder;
+  font-style: italic;
+  text-align:center;
+}
+
+.metrics {
+ display:flex;
+ flex-wrap:wrap;
+ }
+
+ .chicagometrics{
+   flex:100%;
+ }
+ .localmetrics {
+   flex:100%;
+ }
+
+
+/*login_register form*/
+.form{
+  background-color:#92bde7;
+  line-height:1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1em;
+}
+
+.container-form{
+  max-width:500px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:1em;
+}
+h1{
+  color: #000;
+  text-align:center;
+}
+
+.wrapper{
+  box-shadow:0 0 10px 0 rgba(72, 94, 116, 0.7);
+  background:#c9e6ff;
+}
+.wrapper h3{
+  text-align:center;
+  margin:0 1rem 0;
+}
+.wrapper>*{
+  padding: 1em;
+}
+.user-form{
+  text-align:center;
+  display:grid;
+  grid-gap:20px;
+}
+.user-form label{
+display: block;
+
+}
+.user-form p{
+  margin:0;  
+}
+.user-form button, .user-form input{
+  border:1px solid #000;
+  box-shadow: chocolate;
+}
+.user-form button{
+  background-color: #92bde7;
+  border:0;
+  text-transform:uppercase;
+  padding:1em;
+  border:2px solid #c9e6ff;
+  
+}
+.user-form button:hover, .user-form button:focus{
+  background-color: blue;
+  color: #fff;
+  outline:0;
+  transition: background-color 2s ease-out;
+}
+.alert{
+  text-align:center;
+  padding:10px;
+  background:#79c879;
+  color: #fff;
+  margin-bottom:10px;
+  display:none;
+}
 @keyframes animateIn {
   0% {
     opacity: 0;
@@ -202,5 +324,18 @@ li, .subsection2{
 @media screen and (max-width: 700px) {
   .row{   
     flex-direction: column;
+  }
+  .login{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap:20px;
+    width: 50px;
+    margin:20px;
+  }
+  .login button{
+    margin: 10px;
+  }
+  .login p{
+    text-align:left;
   }
 }

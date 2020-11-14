@@ -9,12 +9,26 @@
 <body>
 
 <!-- Header -->
-<header>
-  <div class="main-header">
-    <h1><br>COVID-19 | Hospital Finder</h1>
+<div class="main-body">
+ <div class="main-header">
+    <div class="header-bar">
+      <h1><br>COVID-19 | Hospital Finder</h1>
+    </div>
+  <!--<div class="space">-->
+    <div class="login">
+    
+      <p>
+          <label>Email ID</label>
+          <input type="email" name="emailid" id="emailid">
+          <label>Password</label>
+          <input type="text" name="password" id="password">
+          <button onclick = "login()">Log In</button>
+          |
+          <button onclick = "register()">Register</button>
+          <!--<a href="login_register.html">Register</a>-->
+      </p> 
   </div>
-</header>
-<div><br><br></div>
+</div>
 
 <!--The flex container with 2 flex items: side and main-->
 <div class="flex-container">
@@ -32,15 +46,23 @@
     </div>  
   </div>
 </div>
-  <div class="feedback">
-    <h3>This is for News Letter</h3>
+  <!--<div class="feedback">
+    <h3></h3>
   </div>
-</div>
+</div>-->
 
 
 <!-- Footer -->
 <div class="footer">
-  <footer>Not yet copyrighted!</footer>
+  <footer>copyright 2020 | Hospital Finder</footer>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<!--<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>-->
+
+<script src="js/main.js"></script>
 </div>
 </body>
 </html>
