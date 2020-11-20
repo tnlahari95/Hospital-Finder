@@ -1,50 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hospital Finder | Services</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+  <title>Hospital Finder | Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+  <!--load search box icon-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/script.js"></script>
 </head>
 <body>
 
 <!-- Header -->
-<header>
+<div class="main-body">
   <div class="main-header">
-    <h1><br>COVID-19 | Hospital Finder</h1>
-  </div>
-</header> 
-<div><br><br></div>
-<!--The flex container with 2 flex items: side and main-->
-<div class="flex-container-services">
-  <div class="side">
-    <h2>Menu</h2>
-     <div class="home"><a href=index.html>Home</a></div><br>
-     <div class="about"><a href=about.html>About Us</a></div><br>
-     <div class="services"><a class="current" href=services.html>Services</a></div><br>
-     <div class="contact"><a href=contact.html>Contact</a></div>
-  </div>
-  <div><br><br><br></div>
-  <div class="main3">
-    <div class="subsection2">
-      <h2>Services</h2>
+    <div class="header-bar">
+
+      <h1><br><img src ="logo.png" width="50" height="50"> COVID-19 <span style="color: red">|</span> Hospital Finder<br></h1>
+      <!-- The form -->
+      <form class="search" action="action_page.php">
+        <input type="text" placeholder="Search the site.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+
     </div>
-    <div class="slide">
-      <script src="js/script.js"></script>
-      <ul>
-      <li><a href="javascript:void" onclick="myFunction1(this.href)">General Awareness</a></li>
-      <li><a href="javascript:void" onclick="myFunction2(this.href)">Hospital Finder</a></li>
-      <li><a href="javascript:void" onclick="myFunction3(this.href)">Global Metrics</a></li>
-      </ul>
+    <!--<div class="space">-->
+    <div class="login">
+
+      <p>
+        <label>Email ID</label>
+        <input type="email" name="emailid" id="emailid">
+        <label>Password</label>
+        <input type="text" name="password" id="password">
+        <button onclick = "login()">Log In</button>
+        |
+        <button onclick = "register()">Register</button>
+        <!--<a href="login_register.html">Register</a>-->
+      </p>
+    </div>
+  </div>
+
+  <!--The flex container with 2 flex items: side and main-->
+  <div class="flex-container">
+    <div class="side">
+      <div class="home"><a href=index.html>Home</a></div><br>
+      <div class="about"><a href=about.html>About Us</a></div><br>
+      <div class="services"><a class= "current" href=services.html>Services</a></div><br>
+      <div class="contact"><a href=contact.html>Contact</a></div>
+    </div>
+    <div><br><br></div>
+    <div class="main3">
+      <div class="slide">
+        <ul>
+          <li><a href="javascript:void" onclick="myFunction1(this.href)">General Awareness</a></li>
+          <li><a href="javascript:void" onclick="myFunction2(this.href)">Hospital Finder</a></li>
+          <li><a href="javascript:void" onclick="myFunction3(this.href)">Global Metrics</a></li>
+        </ul>
       </div>
-   </div>
-</div>
-<div class="feedback">
-  <h3>This is for News Letter</h3>
-</div>
-<!-- Footer -->
-<div class="footer">
-  <footer>Not yet copyrighted!</footer>
+    </div>
+  </div>
+
+  <!--<div class="feedback">
+    <h3></h3>
+  </div>
+</div>-->
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <footer>copyright 2020 | Hospital Finder</footer>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+  <!--<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>-->
+
+  <script src="js/main.js"></script>
 </div>
 </body>
 </html>
