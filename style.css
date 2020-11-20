@@ -51,6 +51,7 @@ form.search{
   margin-bottom: 1%;
   margin-right: 6%;
 
+
 }
 /* Style the search field */
 form.search input[type=text] {
@@ -61,6 +62,7 @@ form.search input[type=text] {
   border: 1px solid darkgray;
   background: #F8F9F9;
   margin-right: -1%;
+  border-radius: 25px;
 
 }
 
@@ -74,6 +76,7 @@ form.search button {
   border: 1px solid darkgrey;
   border-left: none; /* Prevent double borders */
   cursor: pointer;
+  border-radius: 25px;
 
 
 }
@@ -92,6 +95,8 @@ form.search::after {
 .login{
   flex: 10%;
   background-color: #EEEEEE;
+
+
 }
 
 .main-header h2{
@@ -102,7 +107,8 @@ form.search::after {
   color:#000;
   text-align:right;
   padding:10px;
-  font-weight: bolder;
+  font-weight: bold;
+
 }
 
 /* Column container */
@@ -110,6 +116,8 @@ form.search::after {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 6px;
+
+
 }
 
 /* Create two unequal columns that sits next to each other */
@@ -120,6 +128,7 @@ form.search::after {
   padding: 40px;
   text-transform:uppercase;
   border-top: 2px solid red;
+
 
 }
 .side h2{
@@ -132,6 +141,7 @@ form.search::after {
   color: #000;
   width: 100%;
   padding: 28px;
+  border-radius: 25px;
 
 }
 
@@ -255,17 +265,21 @@ form.search::after {
   background-image: url('images/COVID-19_image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 .slide{
   float: left;
+  transition: transform .2s;
 }
 
 .slide a{
   text-decoration: none;
   color: black;
+
 }
 .slide a:hover {
   color: red;
+  transform: scale(1.2);
 }
 
 .subsection2 h2{
@@ -335,6 +349,7 @@ li, .subsection2{
   background-color:#92bde7;
   line-height:1.6;
   padding: 1em;
+
 }
 
 .container-form{
@@ -342,6 +357,7 @@ li, .subsection2{
   margin-left:auto;
   margin-right:auto;
   padding:1em;
+
 
 }
 h1{
@@ -364,9 +380,11 @@ h1{
   text-align:center;
   display:grid;
   grid-gap:20px;
+
 }
 .user-form label{
 display: block;
+
 
 }
 .user-form p{
@@ -375,6 +393,7 @@ display: block;
 .user-form button, .user-form input{
   border:1px solid #000;
   box-shadow: chocolate;
+
 }
 .user-form button{
   background-color: #92bde7;
@@ -382,6 +401,7 @@ display: block;
   text-transform:uppercase;
   padding:1em;
   border:2px solid #c9e6ff;
+
   
 }
 .user-form button:hover, .user-form button:focus{
@@ -434,6 +454,8 @@ contact-form {
 .contact-content {
   width: 80%;
   margin: 0 auto;
+  border-radius: 12px;
+
 }
 contact-form label {
   display: block;
@@ -452,6 +474,8 @@ contact-form label {
 .contact-name, .contact-email {
   display: inline-block;
   width: 45%;
+
+
 }
 contact-form label {
   display: block;
@@ -463,23 +487,29 @@ input[name="email"],
 input[name="name"] {
   width: 100%;
   height: 40px;
+  border-radius: 12px;
+
 }
 
 .contact-subject {
   height: 62px;
+
 
 }
 
 input[name="subject"] {
   width: 100%;
   height: 40px;
+  border-radius: 12px;
 }
 
 .contact-content {
+
 }
 textarea {
   width: 100%;
   resize: none;
+  border-radius: 12px;
 }
 .contact-content button {
   margin: 0;
@@ -488,12 +518,17 @@ textarea {
   padding: 8px 77px;
   box-shadow: 0 0 5px rgba(0, 0, 0, .4);
   transition: all;
+  border-radius: 12px;
+
 }
 .contact-content button:hover {
    background: red;
 
  }
-
+/* remove outline from select text input areas */
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
 
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
