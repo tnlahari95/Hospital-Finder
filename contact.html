@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
     <!--load search box icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 
@@ -56,22 +57,22 @@
                     <div class="contact-id">
                         <div class="contact-name">
                             <label for="contact-name">Name</label>
-                            <input id="contact-name" type="text" name="name">
+                            <input class="name" id="contact-name" type="text" name="name">
                         </div>
                         <div class="contact-email">
                             <label for="contact-email">Email</label>
-                            <input id="contact-email" type="text" name="email">
+                            <input class="email" id="contact-email" type="text" name="email">
                         </div>
                     </div>
                     <div class="contact-subject">
                         <label for="contact-subject">Subject</label>
 
-                        <input id="contact-subject" type="text" name="subject">
+                        <input class="subject" id="contact-subject" type="text" name="subject">
                     </div>
                     <div class="contact-content">
                         <label id="contact-content" for="contact-content">Content</label>
 
-                        <textarea name="contact-content" id= cols="30" rows="10"></textarea>
+                        <textarea class="content" name="contact-content" id= cols="30" rows="10"></textarea>
                         <button type="submit" value="send">SUBMIT</button>
 
                     </div>
@@ -89,13 +90,18 @@
         <footer>copyright 2020 | Hospital Finder</footer>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
-    <!--<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>-->
-
-
 </div>
 
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+
+
+<script src="js/contactForm.js"></script>
 </body>
 </html>
