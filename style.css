@@ -92,11 +92,13 @@ form.search::after {
   content: "";
   clear: both;
   display: table;
+
 }
 
 .login{
   flex: 10%;
   background-color: #EEEEEE;
+
 
 
 }
@@ -119,7 +121,6 @@ form.search::after {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 6px;
-
 
 }
 
@@ -353,6 +354,7 @@ li, .subsection2{
   line-height:1.6;
   padding: 1em;
 
+
 }
 
 .container-form{
@@ -360,6 +362,7 @@ li, .subsection2{
   margin-left:auto;
   margin-right:auto;
   padding:1em;
+
 
 
 }
@@ -371,6 +374,7 @@ h1{
 .wrapper{
   box-shadow:0 0 10px 0 rgba(72, 94, 116, 0.7);
   background:#c9e6ff;
+
 }
 .wrapper h3{
   text-align:center;
@@ -383,6 +387,7 @@ h1{
   text-align:center;
   display:grid;
   grid-gap:20px;
+
 
 }
 .user-form label{
@@ -397,6 +402,7 @@ display: block;
   border:1px solid #000;
   box-shadow: chocolate;
 
+
 }
 .user-form button{
   background-color: #92bde7;
@@ -404,7 +410,6 @@ display: block;
   text-transform:uppercase;
   padding:1em;
   border:2px solid #c9e6ff;
-
   
 }
 .user-form button:hover, .user-form button:focus{
