@@ -45,3 +45,27 @@ function saveContactInfo(name, email, subject, message){
         message: message,
     })
 }
+//contact form validation
+
+    function validateForm() {
+        var w = document.forms["contact-form"]["name"].value;
+        var x = document.forms["contact-form"]["email"].value;
+        var y = document.forms["contact-form"]["subject"].value;
+        var z = document.forms["contact-form"]["contact-content"].value;
+        if (w == "") {
+            alert("Name must be filled out");
+            return false;
+        }
+        if (x == ""){
+            alert("Email must be filled out");
+            return false;
+        }
+        if (y == ""){
+            alert("Subject must be filled out");
+            return false;
+        }
+        if (z == ""){
+            alert("Email must have a message");
+            return false;
+        }
+    }
