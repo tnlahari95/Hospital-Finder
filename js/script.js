@@ -72,7 +72,7 @@ window.location.assign("hospitalfinder.html");
 }
 function myFunction3() 
 {
-window.location.assign("globalmetrics.html");
+window.location.assign("covidMetrics.html");
 
 }
 
