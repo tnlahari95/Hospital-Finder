@@ -32,7 +32,7 @@ body {
 
 .header-bar{
   flex: 100%;
-  background-color: #F8F9F9;
+  background-color:lightgray;
 
   
 }
@@ -95,7 +95,7 @@ form.search::after {
 
 .login{
   flex: 10%;
-  background-color: #EEEEEE;
+  background-color: #E0E0E0;
 
 }
 .login input{
@@ -120,7 +120,7 @@ form.search::after {
 }
 
 .login p{
-  color:#000;
+  color:#505050;
   text-align:right;
   padding:10px;
   font-weight: bold;
@@ -242,7 +242,7 @@ form.search::after {
   display:flex;
   flex-wrap:wrap;
   flex-direction: row;
-  justify-content: baseline;
+
 }
 
 .subsection{
@@ -342,7 +342,7 @@ li, .subsection2{
   border-style: solid;
 }
 .description p{
-  font-size: bolder;
+
   font-style: italic;
   text-align:center;
 }
