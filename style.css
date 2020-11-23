@@ -20,7 +20,6 @@ body {
 .main-header {
   display: flex;
   flex-wrap: wrap;
-  background: #666666;
 
 
 
@@ -214,12 +213,12 @@ form.search::after {
 
 /* Footer */
 .footer {
-  height: 50px;
+  height: 80px;
   background-color: #F9F9F9;
   margin-top: -6px;
   padding: 0px;
-  padding-top:50px;
-  padding-bottom:50px;
+  padding-top:30px;
+  padding-bottom:30px;
   color:#000;
   text-align: center;
   font-weight: bolder;
@@ -425,7 +424,7 @@ display: block;
   border:2px solid #c9e6ff;
 
 }
-.user-form button:hover, .user-form button:focus{
+.user-form button:hover{
   background-color: blue;
   color: #fff;
   outline:0;
@@ -496,7 +495,6 @@ contact-form label {
   display: inline-block;
   width: 45%;
 
-
 }
 contact-form label {
   display: block;
@@ -547,9 +545,61 @@ textarea {
 
  }
 /* remove outline from select text input areas */
-input:focus, textarea:focus, select:focus{
+input:focus, textarea:focus, select:focus, .center button:focus{
   outline: none;
 }
+/*COVID-19 Metrics Page */
+#main-metrics{
+  background-image:url("Images/opaque_covid_image.jpg");
+}
+.main-header h1{
+  color:#505050;
+  text-transform: uppercase;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+thead{
+  background-color: black;
+  opacity: 0.8;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  background-color: #606060;
+  opacity: 0.6;
+  color: white;
+
+}
+
+.center button{
+  border-radius: 25px;
+  padding: 10px;
+  border: 1px solid dimgrey;
+  background-color: darkgray;
+  color: #FFFFFF;
+  font-weight: bold;
+
+}
+.center button:hover {
+  background: red;
+
+}
+
 
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
