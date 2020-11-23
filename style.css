@@ -564,6 +564,7 @@ input:focus, textarea:focus, select:focus, .center button:focus{
   padding: 10px;
 }
 table {
+
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -577,13 +578,17 @@ thead{
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  /*border: 1px solid #dddddd;*/
+  border-radius: 20px;
   text-align: center;
   padding: 8px;
   background-color: #606060;
   opacity: 0.6;
   color: white;
   font-weight: bold;
+
+
+
 
 }
 
