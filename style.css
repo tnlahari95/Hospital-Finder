@@ -552,7 +552,7 @@ input:focus, textarea:focus, select:focus, .center button:focus{
   background-image:url("Images/opaque_covid_image.jpg");
 }
 .main-header h1{
-  color:#505050;
+  color:#606060;
   text-transform: uppercase;
 }
 .center {
