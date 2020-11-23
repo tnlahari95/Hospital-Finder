@@ -80,7 +80,6 @@ form.search button {
   cursor: pointer;
   border-radius: 25px;
 
-
 }
 
 form.search button:hover {
@@ -99,8 +98,22 @@ form.search::after {
   flex: 10%;
   background-color: #EEEEEE;
 
-
-
+}
+.login input{
+  border-radius:25px;
+  padding: 5px;
+  border: 1px solid darkgrey;
+}
+.login button{
+  color: white;
+  border-radius:25px;
+  padding: 5px;
+  background-color:#D5D8DC;
+  font-weight: bold;
+  border: 1px solid darkgrey;
+}
+.login button:hover {
+  background: red;
 }
 
 .main-header h2{
@@ -354,7 +367,6 @@ li, .subsection2{
   line-height:1.6;
   padding: 1em;
 
-
 }
 
 .container-form{
@@ -364,11 +376,11 @@ li, .subsection2{
   padding:1em;
 
 
-
 }
 h1{
   color: #000;
   text-align:center;
+
 }
 
 .wrapper{
@@ -379,6 +391,7 @@ h1{
 .wrapper h3{
   text-align:center;
   margin:0 1rem 0;
+
 }
 .wrapper>*{
   padding: 1em;
@@ -410,7 +423,7 @@ display: block;
   text-transform:uppercase;
   padding:1em;
   border:2px solid #c9e6ff;
-  
+
 }
 .user-form button:hover, .user-form button:focus{
   background-color: blue;
@@ -550,6 +563,7 @@ input:focus, textarea:focus, select:focus{
     grid-gap:20px;
     width: 50px;
     margin:20px;
+
   }
   .login button{
     margin: 10px;
