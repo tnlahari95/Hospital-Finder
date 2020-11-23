@@ -57,22 +57,22 @@
                     <div class="contact-id">
                         <div class="contact-name">
                             <label for="contact-name">Name</label>
-                            <input class="name" id="contact-name" type="text" name="name">
+                            <input class="name" id="contact-name" type="text" name="name" required>
                         </div>
                         <div class="contact-email">
                             <label for="contact-email">Email</label>
-                            <input class="email" id="contact-email" type="text" name="email">
+                            <input class="email" id="contact-email" type="email" name="email" required>
                         </div>
                     </div>
                     <div class="contact-subject">
                         <label for="contact-subject">Subject</label>
 
-                        <input class="subject" id="contact-subject" type="text" name="subject">
+                        <input class="subject" id="contact-subject" type="text" name="subject" required>
                     </div>
                     <div class="contact-content">
                         <label id="contact-content" for="contact-content">Content</label>
 
-                        <textarea class="content" name="contact-content" id= cols="30" rows="10"></textarea>
+                        <textarea type="text" class="content" name="contact-content" id= cols="30" rows="10" maxlength="1500" required></textarea>
                         <button type="submit" value="send">SUBMIT</button>
 
                     </div>
