@@ -1,78 +1,122 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
 
-        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+    <script src="js/zipcode.js"> </script>
 
-        <script src="js/zipcode.js"> </script>
-    
-        <title>Hospital Finder</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-    
-    <!-- Header -->
+    <title>Hospital Finder | Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <!--load search box icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<div class="main-body">
     <div class="main-header">
         <div class="header-bar">
-            <h1 style="text-align: center"><br>COVID-19 | Hospital Finder</h1>
+
+            <h1><a href="hospitalfinder.html"><img src ="logo.png" width="50" height="50"></a> COVID-19 <span style="color: red">|</span><span style="color:white"> Hospital Finder</span></h1>      <!-- The form -->
+            <form class="search" action="action_page.php">
+                <input type="text" placeholder="Search the site.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+
+        </div>
+        <!--<div class="space">-->
+        <div class="login">
+
+            <p>
+                <label>Email ID</label>
+                <input type="email" name="emailid" id="emailid">
+                <label>Password</label>
+                <input type="text" name="password" id="password">
+                <button onclick = "login()">Log In</button>
+                <span style="color:red">|</span>
+                <button onclick = "register()">Register</button>
+                <!--<a href="login_register.html">Register</a>-->
+            </p>
         </div>
     </div>
-        <!--<input type="number" id= "demo">
-        <button type="button" onclick="getdata()">Get</button>
-        <p>Result: </p>
-        <p>Population: <strong id ="demo2"></p>-->
-    <div><br></div>
-    <div class="description">
-        <p>This page gives information on COVID-19 metrics.</p>
-        <p> One can find the COVID-19 data related to Chicago and areas within Chicago on entering the zip code.</p>
+
+    <!--The flex container with 2 flex items: side and main-->
+    <div class="flex-container">
+        <div class="side">
+            <div class="home"><a href=index.html>Home</a></div><br>
+            <div class="about"><a href=about.html>About Us</a></div><br>
+            <div class="services"><a class= "current" href=services.html>Services</a></div><br>
+            <div class="contact"><a href=contact.html>Contact</a></div>
+        </div>
+        <div><br><br></div>
+        <div class="main2">
+            <!--<input type="number" id= "demo">
+         <button type="button" onclick="getdata()">Get</button>
+         <p>Result: </p>
+         <p>Population: <strong id ="demo2"></p>-->
+            <div><br></div>
+            <div class="description">
+                <p>This page gives information on COVID-19 metrics.</p>
+                <p> One can find the COVID-19 data related to Chicago and areas within Chicago on entering the zip code.</p>
+            </div>
+            <!-- <div class="metrics">
+            <div class="chicagometrics">
+             <h4>Chicago metrics</h4>
+
+                <p style="text-align:center;">Population: </p>
+                <p style="text-align:center;">Cases: </p>
+                <p style="text-align:center;">Deaths: </p>
+                <p style="text-align:center;">Recovered: </p>
+            </div> -->
+            <div><br></div>
+            <div class="localmetrics">
+                <label>ZIP Code:</label>
+                <input type="number" id="demo">
+                <button type="button" onclick="getdata()">Submit</button>
+
+                <p style="text-align:center;"><strong>Metrics Near You</strong></p>
+
+                <p style="text-align:center;">Population: <strong id="cases"></strong></p>
+                <p style="text-align:center;">Cases: <strong id="population"></strong></p>
+                <p style="text-align:center;">Deaths: <strong id="deaths"></strong></p>
+                <p style="text-align:center;">Recovered: <strong id="recovered"></strong></p>
+
+                <br>
+
+                <p style="text-align:center;"><strong>Hospitals Near You</strong></p>
+
+                <p style="text-align:center;">Hospital Name: <strong id="hsone"></strong></p>
+                <p style="text-align:center;">Medical and Surgical Beds : <strong id="nbone"></strong></p>
+                <p style="text-align:center;">ICU Beds: <strong id="icuone"></strong></p>
+
+                <br>
+
+                <p style="text-align:center;">Hospital Name: <strong id="hstwo"></strong></p>
+                <p style="text-align:center;">Medical and Surgical Beds : <strong id="nbtwo"></strong></p>
+                <p style="text-align:center;">ICU Beds: <strong id="icutwo"></strong></p>
+            </div>
+        </div>
     </div>
-    <!-- <div class="metrics">
-    <div class="chicagometrics">
-     <h4>Chicago metrics</h4>
 
-        <p style="text-align:center;">Population: </p>
-        <p style="text-align:center;">Cases: </p>
-        <p style="text-align:center;">Deaths: </p>
-        <p style="text-align:center;">Recovered: </p>
-    </div> -->
-    <div><br></div>
-    <div class="localmetrics">
-        <label>ZIP Code:</label> 
-        <input type="number" id="demo">
-        <button type="button" onclick="getdata()">Submit</button>
-
-        <p style="text-align:center;"><strong>Metrics Near You</strong></p>
-        
-        <p style="text-align:center;">Population: <strong id="cases"></strong></p>
-        <p style="text-align:center;">Cases: <strong id="population"></strong></p>
-        <p style="text-align:center;">Deaths: <strong id="deaths"></strong></p>
-        <p style="text-align:center;">Recovered: <strong id="recovered"></strong></p> 
-
-        <br>
-
-        <p style="text-align:center;"><strong>Hospitals Near You</strong></p>
-
-        <p style="text-align:center;">Hospital Name: <strong id="hsone"></strong></p>
-        <p style="text-align:center;">Medical and Surgical Beds : <strong id="nbone"></strong></p>
-        <p style="text-align:center;">ICU Beds: <strong id="icuone"></strong></p> 
-
-        <br>
-
-        <p style="text-align:center;">Hospital Name: <strong id="hstwo"></strong></p>
-        <p style="text-align:center;">Medical and Surgical Beds : <strong id="nbtwo"></strong></p>
-        <p style="text-align:center;">ICU Beds: <strong id="icutwo"></strong></p>          
+    <!--<div class="feedback">
+      <h3></h3>
     </div>
-    </div>
+  </div>-->
+
+
     <!-- Footer -->
     <div class="footer">
-        <footer>copyright 2020 | Hospital Finder</footer>
+        <footer>copyright 2020 <span style="color:red">|</span> Hospital Finder</footer>
     </div>
-           
-    </body>
+</div>
+</body>
 </html>
     
