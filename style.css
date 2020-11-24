@@ -249,7 +249,7 @@ form.search::after {
 
 .main2 {
   flex: 85%;
-  padding: 20px;
+  padding: 50px;
   position:relative;
   background-image: url('images/opaque_covid_image.jpg');
   background-repeat: no-repeat;
@@ -268,7 +268,10 @@ form.search::after {
   opacity:0.8;
 
 }
-
+.main2 h1{
+  color: dimgray;
+  font-size: 25px;
+}
 
 .showcase-about h3{
   text-align:center;

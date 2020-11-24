@@ -75,6 +75,3 @@ function myFunction3()
 window.location.assign("covidMetrics.html");
 
 }
-
-
-  
