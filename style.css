@@ -250,7 +250,7 @@ form.search::after {
 .main2 {
   flex: 85%;
   padding: 20px;
-  background-image: url('images/COVID-19_image.jpg');
+  background-image: url('images/opaque_covid_image.jpg');
   background-repeat: no-repeat;
   background-size: cover; 
 }
