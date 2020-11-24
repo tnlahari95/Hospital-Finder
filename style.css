@@ -125,6 +125,7 @@ form.search::after {
   background-color: #E0E0E0;
 
 }
+
 .login input{
   border-radius:25px;
   padding: 5px;
@@ -583,7 +584,7 @@ textarea {
 
  }
 /* remove outline from select text input areas */
-input:focus, textarea:focus, select:focus, .center button:focus{
+input:focus, textarea:focus, select:focus, button:focus{
   outline: none;
 }
 /*COVID-19 Metrics Page */
