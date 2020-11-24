@@ -203,13 +203,6 @@ form.search::after {
   border-bottom: 3px solid red;
 }
 
-/*.feedback{
-  flex:100%;
-  height:150px;
-  background-color: #606060;
-  padding:20px;
-}*/
-
 /* Footer */
 .footer {
   height: 80px;
@@ -223,48 +216,33 @@ form.search::after {
   font-weight: bolder;
 }
 /*About*/
-.flex-container-about{
-  display:flex;
-  flex-wrap: wrap;
-  margin-bottom: 6px;
-}
+
 .main2 {
   flex: 85%;
-  background-color: white;
   padding: 20px;
   background-image: url('images/COVID-19_image.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
 }
 
-.flex-container-showcase-content{
-  display:flex;
-  flex-wrap:wrap;
-  flex-direction: row;
-
-}
-
-.subsection{
-  flex:100%;
-  padding:20px;
-  background-color: darksalmon;
+.showcase-about{
+  width: 260px;
+  margin: 70px;
+  height:190px;
+  background:#EEEEEE;
+  border-radius:90px;
+  width: 90%;
   opacity:0.8;
 }
-.subsection h2{
+
+.showcase-about h3{
   text-align:center;
-  text-decoration-line: underline;
+  color: #000;
 }
-.container1 {
-  flex:50%;
-  padding:20px;
-  background-color: lightsteelblue;
-  opacity:0.8;
-}
-.container2{
-  flex:50%;
-  padding:20px;
-  background-color: lightblue;
-  opacity:0.8;
+
+.showcase-about p{
+  text-align: center;
+  color: #000;
 }
 
 /*Services*/
