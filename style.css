@@ -271,6 +271,7 @@ form.search::after {
 .main2 h1{
   color: dimgray;
   font-size: 25px;
+  text-transform: uppercase;
 }
 
 .showcase-about h3{

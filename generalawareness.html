@@ -1,39 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-a:link, a:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover, a:active {
-  background-color: red;
-}
-</style>
+    <title>Hospital Finder | Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <!--load search box icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
 
+<!-- Header -->
+<div class="main-body">
+    <div class="main-header">
+        <div class="header-bar">
 
-<p>Coronavirus disease (COVID-19) advice for the public:</p>
-<br>
+            <h1><a href="hospitalfinder.html"><img src ="logo.png" width="50" height="50"></a> COVID-19 <span style="color: red">|</span><span style="color:white"> Hospital Finder</span></h1>      <!-- The form -->
+            <form class="search" action="action_page.php">
+                <input type="text" placeholder="Search the site.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
 
-<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters" target="_blank">Myth-Busters</a>
+        </div>
+        <!--<div class="space">-->
+        <div class="login">
 
-<a href="https://www.who.int/campaigns/connecting-the-world-to-combat-coronavirus/how-to-report-misinformation-online" target="_blank">Report Misinformation</a>
+            <p>
+                <label>Email ID</label>
+                <input type="email" name="emailid" id="emailid">
+                <label>Password</label>
+                <input type="text" name="password" id="password">
+                <button onclick = "login()">Log In</button>
+                <span style="color:red">|</span>
+                <button onclick = "register()">Register</button>
+                <!--<a href="login_register.html">Register</a>-->
+            </p>
+        </div>
+    </div>
 
-<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/q-a-small-public-gatherings-and-covid-19" target="_blank">Small Public Gathering and COVID-19</a>
+    <!--The flex container with 2 flex items: side and main-->
+    <div class="flex-container">
+        <div class="side">
+            <div class="home"><a href=index.html>Home</a></div><br>
+            <div class="about"><a href=about.html>About Us</a></div><br>
+            <div class="services"><a class= "current" href=services.html>Services</a></div><br>
+            <div class="contact"><a href=contact.html>Contact</a></div>
+        </div>
+        <div><br><br></div>
+        <div class="main2">
+            <h1>Coronavirus disease (COVID-19) advice for the public</h1>
 
-<br>
-<br>
+            <h2><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters" target="_blank">Myth-Busters</a></h2>
 
-<a href="https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/holidays/thanksgiving.html" target="_blank">Holiday TIPS</a>
+            <h2><a href="https://www.who.int/campaigns/connecting-the-world-to-combat-coronavirus/how-to-report-misinformation-online" target="_blank">Report Misinformation</a></h2>
 
-<a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/about-face-coverings.html" target="_blank">TIPS On Wearing A Mask</a>
+            <h2><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/q-a-small-public-gatherings-and-covid-19" target="_blank">Small Public Gathering and COVID-19</a></h2>
 
+            <h2><a href="https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/holidays/thanksgiving.html" target="_blank">Holiday TIPS</a></h2>
+
+            <h2><a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/about-face-coverings.html" target="_blank">TIPS On Wearing A Mask</a></h2>
+        </div>
+    </div>
+
+    <!--<div class="feedback">
+      <h3></h3>
+    </div>
+  </div>-->
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <footer>copyright 2020 <span style="color:red">|</span> Hospital Finder</footer>
+    </div>
+</div>
 </body>
 </html>
