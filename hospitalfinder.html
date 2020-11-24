@@ -7,7 +7,7 @@
         <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
 
-        <script src="js/zipcode.js"></script>
+        <script src="js/zipcode.js"> </script>
     
         <title>Hospital Finder</title>
         <meta charset="UTF-8">
@@ -22,11 +22,16 @@
             <h1><br>COVID-19 | Hospital Finder</h1>
         </div>
     </div>
+        <!--<input type="number" id= "demo">
+        <button type="button" onclick="getdata()">Get</button>
+        <p>Result: </p>
+        <p>Population: <strong id ="demo2"></p>-->
     <div><br></div>
     <div class="description">
-        <p>This page gives information on COVID-19 metrics within areas of Chicago and list of available hospitals nearby the entered zip code.</p>
+        <p>This page gives information on COVID-19 metrics.</p>
+        <p> One can find the COVID-19 data related to Chicago and areas within Chicago on entering the zip code.</p>
     </div>
-    <div class="metrics">
+    <!-- <div class="metrics">
     <div class="chicagometrics">
      <h4>Chicago metrics</h4>
 
@@ -34,7 +39,7 @@
         <p style="text-align:center;">Cases: </p>
         <p style="text-align:center;">Deaths: </p>
         <p style="text-align:center;">Recovered: </p>
-    </div>
+    </div> -->
     <div><br></div>
     <div class="localmetrics">
         <label>ZIP Code:</label> 
@@ -43,7 +48,15 @@
         <p style="text-align:center;">Population: <strong id="cases"></strong></p>
         <p style="text-align:center;">Cases: <strong id="population"></strong></p>
         <p style="text-align:center;">Deaths: <strong id="deaths"></strong></p>
-        <p style="text-align:center;">Recovered: <strong id="recovered"></strong></p>          
+        <p style="text-align:center;">Recovered: <strong id="recovered"></strong></p> 
+
+        <p style="text-align:center;">Hospital Name: <strong id="hsone"></strong></p>
+        <p style="text-align:center;">Medical and Surgical Beds : <strong id="nbone"></strong></p>
+        <p style="text-align:center;">ICU Beds: <strong id="icuone"></strong></p> 
+
+        <p style="text-align:center;">Hospital Name: <strong id="hstwo"></strong></p>
+        <p style="text-align:center;">Medical and Surgical Beds : <strong id="nbtwo"></strong></p>
+        <p style="text-align:center;">ICU Beds: <strong id="icutwo"></strong></p>          
     </div>
     </div>
     <!-- Footer -->

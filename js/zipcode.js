@@ -27,9 +27,26 @@
         var deaths = snapshot.val().deaths;
         var recovered = snapshot.val().recovered;
 
+        var hsone =snapshot.val().hsone;
+        var nbone = snapshot.val().nbone;
+        var icuone = snapshot.val().icuone;
+
+        var hstwo =snapshot.val().hstwo;
+        var nbtwo = snapshot.val().nbtwo;
+        var icutwo = snapshot.val().icutwo;
+
+
         document.getElementById("cases").innerHTML = cases;
         document.getElementById("population").innerHTML = population;
         document.getElementById("deaths").innerHTML = deaths;
         document.getElementById("recovered").innerHTML = recovered;
+
+        document.getElementById("hsone").innerHTML = hsone;
+        document.getElementById("nbone").innerHTML = nbone;
+        document.getElementById("icuone").innerHTML = icuone;
+
+        document.getElementById("hstwo").innerHTML = hstwo;
+        document.getElementById("nbtwo").innerHTML = nbtwo;
+        document.getElementById("icutwo").innerHTML = icutwo;
     }) 
     }
