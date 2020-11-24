@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+
+	<title>Hospital Beds Information</title>
+</head>
+<body bgcolor="#cccccc">
+	<center>
+	<table border="1" cellspacing="5" bgcolor="white">
+		<caption><b>Input Hospital Details</b></caption>
+		<tr>
+			<th rowspan="2">Zip Code</th>
+			<th colspan="5">Hospital #1</th>
+		</tr>
+		<tr>
+			<th>Hospital Name</th>
+			<th>Normal Beds</th>
+			<th>ICU Beds</th>
+			<th>Availability</th>
+		</tr>
+		<tr>
+			<td><input type="text" id="tfzp"></td>
+			<td><input type="text" id="tname1"></td>
+			<td><input type="text" id="tfnb1"></td>
+			<td><input type="text" id="tficu1"></td>
+			<td><input type="text" id="tfavail1"></td>
+		</tr>
+		<br>
+		<tr>
+			<th colspan="5">Hospital #2</th>
+
+		</tr>
+		<tr>
+			<th>Hospital Name</th>
+			<th>Normal Beds</th>
+			<th>ICU Beds</th>
+			<th>Availability</th>
+
+		</tr>
+		<tr>
+			<td><input type="text" id="tname2"></td>
+			<!-- <td><input type="text" id="tfzp2"></td> -->
+			<td><input type="text" id="tfnb2"></td>
+			<td><input type="text" id="tficu2"></td>
+			<td><input type="text" id="tfavail2"></td>
+		</tr>
+
+				<br>
+
+		<tr>
+			<!-- <th rowspan="2">Hospital Name</th> -->
+			<th colspan="5">Hospital #3</th>
+
+		</tr>
+		<tr>
+			<th>Hospital Name</th>
+			<th>Normal Beds</th>
+			<th>ICU Beds</th>
+			<th>Availability</th>
+
+		</tr>
+		<tr>
+			<td><input type="text" id="tname3"></td>
+			<!-- <td><input type="text" id="tfzp3"></td> -->
+			<td><input type="text" id="tfnb3"></td>
+			<td><input type="text" id="tficu3"></td>
+			<td><input type="text" id="tfavail3"></td>
+		</tr>
+
+		<tr>
+			<th colspan="5" height="30">
+
+				<input type="submit" value="Add To Table" onclick="mySub()"></th>
+		</tr>	
+	</table>
+	<br>
+	<!-- <table border="1" cellspacing="5" bgcolor="white" height="100" width="500" cellpadding="5" id="TableScore">
+		<caption><b>Clients Information</b></caption>
+		<tr>
+			<th width="180">Name</th>
+			<th>Zip Code</th>
+			<th>Normal Beds</th>
+			<th>ICU Beds</th>
+			<th>Available</th>
+		</tr>
+		
+	</table> -->
+	</center>
+<!-- 
+	// <script type="text/javascript">
+	// 	function mySub(){
+	// 		var nam, zp, nb, icu, avail;
+	// 		nam=(document.getElementById('tname').value);
+	// 		zp=document.getElementById('tfzp').value;
+	// 		nb=parseFloat(document.getElementById('tfnb').value);
+	// 		icu=parseFloat(document.getElementById('tficu').value);
+	// 		avail=parseFloat(document.getElementById('tfavail').value);
+			
+	// 		//Display on Table
+	// 		var newTable = document.getElementById('TableScore');
+	// 		var row = newTable.insertRow(-1);
+	// 		var cell1 = row.insertCell(0);
+	// 		var cell2 = row.insertCell(0);
+	// 		var cell3 = row.insertCell(0);
+	// 		var cell4 = row.insertCell(0);
+	// 		var cell5 = row.insertCell(0);
+
+	// 		cell5.innerHTML= nam;
+	// 		cell4.innerHTML=zp;
+	// 		cell3.innerHTML=nb;
+	// 		cell2.innerHTML=icu;
+	// 		cell1.innerHTML=avail;
+
+			
+	// 	}
+	// </script>
+ -->
+ 	<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDg65kYtscbO_vxCbvI787n62VpaWrI-mw",
+    authDomain: "finder-403dd12.firebaseapp.com",
+    databaseURL: "https://finder-403dd12.firebaseio.com",
+    projectId: "finder-403dd12",
+    storageBucket: "finder-403dd12.appspot.com",
+    messagingSenderId: "208891475642",
+    appId: "1:208891475642:web:d9e2f0f14755c9694ab483",
+    measurementId: "G-DFK31M1KDX"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  function mySub() {
+
+
+  			var zp=document.getElementById('tfzp').value;
+			var nam1=(document.getElementById('tname1').value);
+			var nb1=parseFloat(document.getElementById('tfnb1').value);
+			var icu1=parseFloat(document.getElementById('tficu1').value);
+			var avail1=parseFloat(document.getElementById('tfavail1').value);
+			var nam2=(document.getElementById('tname2').value);
+			var nb2=parseFloat(document.getElementById('tfnb2').value);
+			var icu2=parseFloat(document.getElementById('tficu2').value);
+			var avail2=parseFloat(document.getElementById('tfavail2').value);
+			var nam3=(document.getElementById('tname3').value);
+			var nb3=parseFloat(document.getElementById('tfnb3').value);
+			var icu3=parseFloat(document.getElementById('tficu3').value);
+			var avail3=parseFloat(document.getElementById('tfavail3').value);
+
+			firebase.database().ref('user/'+zp).set({ 
+
+			zp:tfzp,
+
+			nam1:tname1, 
+			nb1:tfnb1, 
+			icu1:tficu1, 
+			avail1:tfavail1, 
+
+			nam2:tname2, 
+			nb2:tfnb2, 
+			icu2:tficu2, 
+			avail2:tfavail2,
+
+			nam3:tname3, 
+			nb3:tfnb3, 
+			icu3:tficu3, 
+			avail3:tfavail3
+
+});
+
+}
+
+</script>
+</body>
+</html>
