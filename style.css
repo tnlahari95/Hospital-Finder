@@ -39,11 +39,10 @@ body {
   color:#000;
   font-size: 60px;
   text-align:left;
-  margin:0;
-  padding:0;
   padding-left: 160px;
-  padding-bottom: 15px;
-  margin-top:-50px;
+
+  margin-top:30px;
+  margin-bottom: 20px;
 }
 
 /* Animation for the logo */
@@ -238,6 +237,7 @@ form.search::after {
   height: 80px;
   background-color: #F9F9F9;
   margin-top: -6px;
+  width: 100%;
   padding: 0px;
   padding-top:30px;
   padding-bottom:30px;
@@ -250,20 +250,25 @@ form.search::after {
 .main2 {
   flex: 85%;
   padding: 20px;
+  position:relative;
   background-image: url('images/opaque_covid_image.jpg');
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
+  text-align: center;
+
 }
 
 .showcase-about{
   width: 260px;
-  margin: 70px;
-  height:190px;
+  margin: 90px;
+  height:130px;
   background:#EEEEEE;
   border-radius:90px;
   width: 90%;
   opacity:0.8;
+
 }
+
 
 .showcase-about h3{
   text-align:center;
@@ -273,6 +278,54 @@ form.search::after {
 .showcase-about p{
   text-align: center;
   color: #000;
+}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
 
 /*Services*/
