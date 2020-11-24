@@ -79,6 +79,7 @@ form.search{
   margin-right: 6%;
 
 }
+
 /* Style the search field */
 form.search input[type=text] {
   width: 65%;
@@ -91,6 +92,7 @@ form.search input[type=text] {
   border-radius: 25px;
 
 }
+
 
 /* Style the submit button */
 form.search button {
