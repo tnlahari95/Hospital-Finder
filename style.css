@@ -259,7 +259,7 @@ form.search::after {
 }
 
 .showcase-about{
-  width: 260px;
+
   margin: 90px;
   height:130px;
   background:#EEEEEE;
@@ -291,6 +291,7 @@ img {vertical-align: middle;}
   max-width: 1000px;
   position: relative;
   margin: auto;
+
 }
 
 
@@ -439,7 +440,32 @@ li, .subsection2{
   background: #F8F9F9;
   border-radius: 25px;
 }
+.showcase-hospitalFinder {
+  margin:auto;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  width: 50%;
+  position: relative;
+  font-weight: bold;
 
+}
+.showcase-hospitalFinder a{
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+.showcase-hospitalFinder a:hover{
+
+  border: red;
+  border-style: solid;
+  border-radius: 90px;
+  padding: 15px;
+
+}
+.showcase-hospitalFinder a:active {
+  background: red;
+  color: white;
+}
 
 /*login_register form*/
 .form{
