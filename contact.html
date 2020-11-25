@@ -17,6 +17,19 @@
 <div class="main-body">
     <div class="main-header">
         <div class="header-bar">
+            <div class="login">
+
+                <p>
+                    <label>Email ID</label>
+                    <input type="email" name="emailid" id="emailid">
+                    <label>Password</label>
+                    <input type="text" name="password" id="password">
+                    <button onclick = "login()">Log In</button>
+                    <span style="color:red">|</span>
+                    <button onclick = "register()">Register</button>
+                    <!--<a href="login_register.html">Register</a>-->
+                </p>
+            </div>
 
             <h1><a href="hospitalfinder.html"><img src ="logo.png" width="50" height="50"></a> COVID-19 <span style="color: red">|</span><span style="color:white"> Hospital Finder</span></h1>            <!-- The form -->
             <form class="search" action="action_page.php">
@@ -26,19 +39,7 @@
 
         </div>
         <!--<div class="space">-->
-        <div class="login">
 
-            <p>
-                <label>Email ID</label>
-                <input type="email" name="emailid" id="emailid">
-                <label>Password</label>
-                <input type="text" name="password" id="password">
-                <button onclick = "login()">Log In</button>
-                <span style="color:red">|</span>
-                <button onclick = "register()">Register</button>
-                <!--<a href="login_register.html">Register</a>-->
-            </p>
-        </div>
     </div>
 
     <!--The flex container with 2 flex items: side and main-->

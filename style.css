@@ -13,6 +13,7 @@ body {
 
 .main-body {
   background-color: #606060;
+  position: relative;
 
 
 }
@@ -20,7 +21,6 @@ body {
 .main-header {
   display: flex;
   flex-wrap: wrap;
-
 
 
   /* margin-bottom: 6px;
@@ -33,6 +33,9 @@ body {
 .header-bar{
   flex: 100%;
   background-color:lightgray;
+  width: 100%;
+  position: static;
+
 
 }
 .header-bar h1{
@@ -41,7 +44,7 @@ body {
   text-align:left;
   padding-left: 160px;
 
-  margin-top:30px;
+  margin-top:100px;
   margin-bottom: 20px;
 }
 
@@ -122,6 +125,10 @@ form.search::after {
 .login{
   flex: 10%;
   background-color: #E0E0E0;
+  position: fixed;
+  width: 100%;
+  opacity: 0.5;
+
 
 }
 
@@ -244,13 +251,14 @@ form.search::after {
   color:#000;
   text-align: center;
   font-weight: bolder;
+  position:static;
 }
 /*About*/
 
 .main2 {
   flex: 85%;
   padding: 50px;
-  position:relative;
+  position:static;
   background-image: url('images/opaque_covid_image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -445,7 +453,6 @@ li, .subsection2{
   margin-top: 60px;
   margin-bottom: 100px;
   width: 50%;
-  position: relative;
   font-weight: bold;
 
 }
@@ -728,18 +735,5 @@ td, th {
     flex-direction: column;
 
   }
-  .login{
-    display:grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap:20px;
-    width: 50px;
 
-
-  }
-  .login button{
-    margin: 10px;
-  }
-  .login p{
-    text-align:left;
-  }
 }
