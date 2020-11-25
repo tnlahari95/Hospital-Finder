@@ -407,24 +407,38 @@ li, .subsection2{
 /*Hospitalfinder*/
 .description{
   border-style: solid;
+  border-radius: 90px;
+  font-weight: bold;
 }
 .description p{
 
-  font-style: italic;
   text-align:center;
 }
 
-.metrics {
- display:flex;
- flex-wrap:wrap;
- }
+.localmetrics button {
+  width: 100px;
+  padding: 10px;
+  background: #D5D8DC;
+  color: white;
+  font-size: 17px;
+  border: 1px solid darkgrey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  border-radius: 25px;
 
- .chicagometrics{
-   flex:100%;
- }
- .localmetrics {
-   flex:100%;
- }
+}
+
+.localmetrics button:hover {
+  background: red;
+}
+.localmetrics input{
+  width: 200px;
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid darkgray;
+  background: #F8F9F9;
+  border-radius: 25px;
+}
 
 
 /*login_register form*/
