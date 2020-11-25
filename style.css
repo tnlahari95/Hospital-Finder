@@ -246,8 +246,8 @@ form.search::after {
   margin-top: -6px;
   width: 100%;
   padding: 0px;
-  padding-top:30px;
-  padding-bottom:30px;
+  padding-top:50px;
+  padding-bottom:50px;
   color:#000;
   text-align: center;
   font-weight: bolder;
@@ -472,6 +472,13 @@ li, .subsection2{
 .showcase-hospitalFinder a:active {
   background: red;
   color: white;
+}
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }
 
 /*login_register form*/
