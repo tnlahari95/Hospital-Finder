@@ -1,4 +1,5 @@
 //Initialise firebase
+/*
 var firebaseConfig = {
     apiKey: "AIzaSyBLnyguw7cAe3WHjruW6eyZalIwNgw1wBc",
     authDomain: "register-form-8f1a3.firebaseapp.com",
@@ -16,7 +17,7 @@ var firebaseConfig = {
   //Reference email collection
   var messagesRef = firebase.database().ref();
 
-
+*/
 
 //login-register page
 document.getElementById("register-form").addEventListener('submit', submitform);
