@@ -65,8 +65,6 @@
 
 
             }
-            this.lat=lat;
-            this.lng=lng;
 
             var map;
 
