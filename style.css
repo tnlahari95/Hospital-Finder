@@ -201,7 +201,7 @@ form.search::after {
 .side {
   flex: 15%;
   background-color: #EEEEEE;
-  padding: 40px;
+  padding: 10px;
   text-transform:uppercase;
   border-top: 2px solid red;
 
