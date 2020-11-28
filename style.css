@@ -385,7 +385,6 @@ img {vertical-align: middle;}
 .slide{
   float: left;
   transition: transform .2s;
-  padding: 10px;
 
 }
 
