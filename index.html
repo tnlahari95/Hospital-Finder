@@ -42,17 +42,16 @@
         <h1><a href="hospitalfinder.html"><img src ="logo.png" width="50" height="50"></a> COVID-19 <span style="color: red">|</span><span style="color:white"> Hospital Finder</span></h1>
         <!-- The form -->
 
-        <form class="search" onclick="newDoc()" method="get">
-            <input id="site-search" type="text" placeholder="Search the site.." name="search">
-            <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+        <form class="search"  method="get">
+            <input id="site-search" onclick="newDoc()" type="text" placeholder="Search the site.." name="search">
         </form>
 
     </div>
-<script>
-    function newDoc() {
-        window.location.assign('searchResults.html');
-    }
-</script>
+     <script>
+         function newDoc() {
+             window.location.assign('searchResults.html');
+         }
+     </script>
 
   <!--<div class="space">-->
 

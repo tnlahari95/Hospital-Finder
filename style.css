@@ -80,7 +80,7 @@ form.search{
 
 /* Style the search field */
 form.search input[type=text] {
-  width: 65%;
+  width:20vw;
   padding: 10px;
   font-size: 17px;
   color: red;
