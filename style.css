@@ -12,25 +12,20 @@ body {
 }
 
 .main-body {
-  background-color: #606060;
-  position: relative;
 
 
 }
+
 /* Header*/
 .main-header {
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 
-
-  /* margin-bottom: 6px;
-  height:200px;
-  padding-bottom: 5px;
-  margin:0;
-  padding:0;*/
 }
 
 .header-bar{
+  height: 30vh;
   flex: 100%;
   background-color:lightgray;
   width: 100%;
@@ -39,11 +34,11 @@ body {
 
 }
 .header-bar h1{
+
   color:#000;
   font-size: 60px;
   text-align:left;
   padding-left: 160px;
-
   margin-top:100px;
   margin-bottom: 20px;
 }
@@ -76,9 +71,10 @@ body {
 
 form.search{
   float: right;
-  margin-top: -2%;
-  margin-bottom: 1%;
+  margin-top: -4em;
   margin-right: 6%;
+
+
 
 }
 
@@ -146,8 +142,6 @@ form.search::after {
   margin: 10px;
 }
 
-
-
 .login{
   flex: 10%;
   background-color: #E0E0E0;
@@ -199,9 +193,9 @@ form.search::after {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex: 15%;
+  flex: 20vh;
   background-color: #EEEEEE;
-  padding: 10px;
+  padding: 4%;
   text-transform:uppercase;
   border-top: 2px solid red;
 
@@ -233,9 +227,9 @@ form.search::after {
 }
 /* Main column */
 .main {
-  flex: 85%;
+  flex: 12;
+  height: 65vh;
   background-color: white;
-  padding: 20px;
   background-image: url('images/COVID-19_image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -267,13 +261,11 @@ form.search::after {
 
 /* Footer */
 .footer {
-  height: 80px;
+  height: 20vh;
   background-color: #F9F9F9;
   margin-top: -6px;
   width: 100%;
-  padding: 0px;
-  padding-top:50px;
-  padding-bottom:50px;
+  padding: 3em;
   color:#000;
   text-align: center;
   font-weight: bolder;
@@ -282,8 +274,8 @@ form.search::after {
 /*About*/
 
 .main2 {
-  flex: 85%;
-  padding: 50px;
+  flex: 12;
+  min-height: calc(100vh - 40vh);
   position:static;
   background-image: url('images/opaque_covid_image.jpg');
   background-repeat: no-repeat;
@@ -374,9 +366,10 @@ img {vertical-align: middle;}
   margin-bottom: 6px;
 }
 .main3{
-  flex: 85%;
+  flex: 12;
+  height: 65vh;
   background-color: white;
-  padding: 20px;
+  padding-top: 60px;
   background-image: url('images/COVID-19_image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -598,7 +591,8 @@ display: block;
 /* Contact Form*/
 
 .contact-section {
-  flex: 85%;
+  flex: 12;
+  height: 65vh;
   background: #f5f5f5;
   padding: 20px 0 20px 0;
   text-align: center;
@@ -763,7 +757,7 @@ td, th {
 
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   .row{
     flex-direction: column;
 
