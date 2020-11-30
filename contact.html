@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/searchResults.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 
@@ -23,7 +24,10 @@
 <div class="main-body">
     <div class="main-header">
         <div class="header-bar">
-            <div class="login">
+            <div class="login" id="LoginBar">
+                <div id="right">
+                    <a href="#" onclick="Hide(LoginBar);">X</a>
+                </div>
 
                 <p>
                     <label>Email ID</label>

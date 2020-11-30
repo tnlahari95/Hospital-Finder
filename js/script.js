@@ -77,7 +77,10 @@ window.location.assign("covidMetrics.html");
 
 }
 
-
-
+//hide th login button
+function Hide(HideID)
+{
+    HideID.style.display = "none";
+}
 
 
