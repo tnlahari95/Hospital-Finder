@@ -132,16 +132,21 @@ form.search::after {
 }
 
 #searchResults a{
-
+  outline: none;
   text-decoration: none;
   color: black;
+}
+#searchResults a:hover{
+
+  border: red;
+  border-style: solid;
+  border-radius: 90px;
+  padding: 15px;
 
 }
-
-#searchResults a:hover, a.current{
-
-  border-bottom: 3px solid red;;
-
+#searchResults a:active {
+  background: red;
+  color: white;
 }
 
 .ui-menu-item {

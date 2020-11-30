@@ -22,7 +22,7 @@ var firebaseConfig = {
 //login-register page
 document.getElementById("register-form").addEventListener('submit', submitform);
 
-//submit form
+//submit contact form
 function submitform(e){
     e.preventDefault();
     //Get values
