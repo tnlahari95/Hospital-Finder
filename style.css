@@ -321,7 +321,7 @@ form.search::after {
 
 .main2 {
   flex: 12;
-  min-height: calc(100vh - 40vh);
+
   position:static;
   background-image: url('images/opaque_covid_image.jpg');
   background-repeat: no-repeat;
@@ -355,16 +355,7 @@ form.search::after {
   text-align: center;
   color: #000;
 }
-.mySlides {display: none;}
-img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-
-}
 
 
 /* The dots/bullets/indicators */
@@ -479,6 +470,21 @@ li, .subsection2{
 
 
 /*Hospitalfinder*/
+.main-hospitalFinder {
+  flex: 12;
+  min-height: calc(100vh - 40vh);
+  position:static;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+}
+.main-hospitalFinder h1 {
+  color: dimgray;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
 .description{
   border-style: solid;
   border-radius: 90px;
@@ -513,31 +519,10 @@ li, .subsection2{
   background: #F8F9F9;
   border-radius: 25px;
 }
-.showcase-hospitalFinder {
-  margin:auto;
-  margin-top: 60px;
-  margin-bottom: 100px;
-  width: 50%;
-  font-weight: bold;
+.local-metrics{
+  text-alight: left;
+}
 
-}
-.showcase-hospitalFinder a{
-  outline: none;
-  text-decoration: none;
-  color: black;
-}
-.showcase-hospitalFinder a:hover{
-
-  border: red;
-  border-style: solid;
-  border-radius: 90px;
-  padding: 15px;
-
-}
-.showcase-hospitalFinder a:active {
-  background: red;
-  color: white;
-}
 /* Set the size of the div element that contains the map */
 #map {
   height: 400px;
@@ -801,7 +786,43 @@ td, th {
 }
 
 
+/* General Awareness Page */
 
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+}
+.showcase-generalAwareness {
+  margin:auto;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  width: 50%;
+  font-weight: bold;
+
+}
+.showcase-generalAwareness a{
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+.showcase-generalAwareness a:hover{
+
+  border: red;
+  border-style: solid;
+  border-radius: 90px;
+  padding: 15px;
+
+}
+.showcase-generalAwareness a:active {
+  background: red;
+  color: white;
+}
 /* Responsive layout - when the screen is less than 700px wide, make columns stack on top of each other instead of next to each other */
 
 @media screen and (max-width: 700px) {
