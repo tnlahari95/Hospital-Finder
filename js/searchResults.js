@@ -31,6 +31,17 @@ $(document).ready(function (){
 
 
                 });
+            fetch(`http://localhost:3000/get/${ui.item.id}`)
+                .then(result => result.json())
+                .then(result => {
+                    result.contact.forEach(contact => {
+                        $("#searchResults").append(`<li>${contact}</li>`);
+
+                    });
+
+
+                });
+
         }
 
     });

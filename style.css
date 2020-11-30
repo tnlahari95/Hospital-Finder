@@ -19,8 +19,10 @@ body {
 /* Header*/
 .main-header {
   display: flex;
+  overflow: hidden;
   flex-wrap: wrap;
   overflow: hidden;
+
 
 }
 
@@ -80,6 +82,7 @@ form.search{
 
 /* Style the search field */
 form.search input[type=text] {
+
   width:20vw;
   padding: 10px;
   font-size: 17px;
@@ -122,9 +125,25 @@ form.search::after {
 }
 /* search results*/
 #searchResults {
+  margin-top: 50px;
+  padding: 20px;
   text-align: left;
   float: left;
 }
+
+#searchResults a{
+
+  text-decoration: none;
+  color: black;
+
+}
+
+#searchResults a:hover, a.current{
+
+  border-bottom: 3px solid red;;
+
+}
+
 .ui-menu-item {
   background: none;
   color:red;
@@ -757,11 +776,27 @@ td, th {
 
 
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 500px) {
-  .row{
-    flex-direction: column;
+/* Responsive layout - when the screen is less than 700px wide, make columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 700px) {
+  .login{
+    float: none;
+    text-align: left;
+    display: block;
+    text-align: left;
 
   }
 
+
+   .search {
+    float: none;
+    text-align: left;
+
+  }
+   .side{
+     float: none;
+     text-align: left;
+
+   }
 }
+
