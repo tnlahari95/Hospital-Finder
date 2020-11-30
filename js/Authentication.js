@@ -29,19 +29,24 @@
 
 const auth = firebase.auth();
 
-  function register(){
-    const email = document.getElementById('emailid');
-    const password = document.getElementById('password');
-    const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-    promise.catch(e => console.log(e.message));
-    window.alert("Registered");
-  }
+function register(){
+  const email = document.getElementById('emailid');
+  const password = document.getElementById('password');
+  const promise = auth.createUserWithEmailAndPassword(email.value, password.value).then(function(data){
+    console.log(firebase.user.email)
+    sessionStorage.setItem("currUserEmail", firebase.user.email)
+  }).catch(function(error){
+    console.log(error)
+  }); 
+}
 
-  function login(){
-  var email = document.getElementById('emailid');
-  var password = document.getElementById('password');
-  const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-  promise.catch(e => window.alert(e.message));
-    
-    alert("logged in" + " " + email.value);
-  }
+function login(){
+var email = document.getElementById('emailid');
+var password = document.getElementById('password');
+const promise = auth.signInWithEmailAndPassword(email.value, password.value).then(function(data){
+  console.log(data.user.email)
+  sessionStorage.setItem("currUserEmail", firebase.user.email)
+}).catch(function(error){
+  console.log(error)
+});
+}

@@ -22,81 +22,79 @@
 </head>
 <body>
 
-<!-- Header -->
-<div class="main-body">
- <div class="main-header">
-    <div class="header-bar">
+  <!-- Header -->
+  <div class="main-body">
+  <div class="main-header">
+      <div class="header-bar">
 
-        <div class="login" id="LoginBar">
-            <div id="right">
-                <a href="#" onclick="Hide(LoginBar);">X</a>
-            </div>
+          <div class="login" id="LoginBar">
+              <div id="right">
+                  <a href="#" onclick="Hide(LoginBar);">X</a>
+              </div>
 
-            <p>
-                <label>Email ID</label>
-                <input type="email" name="emailid" id="emailid">
-                <label>Password</label>
-                <input type="text" name="password" id="password">
-                <button onclick = "login()">Log In</button>
-                <span style="color:red">|</span>
-                <button onclick = "register()">Register</button>
-                <!--<a href="login_register.html">Register</a>-->
-            </p>
-        </div>
+              <p>
+                  <label>Email ID</label>
+                  <input type="email" name="emailid" id="emailid">
+                  <label>Password</label>
+                  <input type="text" name="password" id="password">
+                  <button onclick = "login()">Log In</button>
+                  <span style="color:red">|</span>
+                  <button onclick = "register()">Register</button>
+                  <!--<a href="login_register.html">Register</a>-->
+              </p>
+          </div>
 
-        <h1><a href="hospitalfinder.html"><img src ="logo.png" width="50" height="50"></a> COVID-19 <span style="color: red">|</span><span style="color:white"> Hospital Finder</span></h1>
-        <!-- The form -->
+          <h1><a href="hospitalfinder.html"><img src ="logo.png" width="50" height="50"></a> COVID-19 <span style="color: red">|</span><span style="color:white"> Hospital Finder</span></h1>
+          <!-- The form -->
 
-        <form class="search"  method="get">
-            <input id="site-search" onclick="newDoc()" type="text" placeholder="Search the site.." name="search">
-        </form>
+          <form class="search"  method="get">
+              <input id="site-search" onclick="newDoc()" type="text" placeholder="Search the site.." name="search">
+          </form>
 
 
+      </div>
+      <script>
+          function newDoc() {
+              window.location.assign('searchResults.html');
+          }
+      </script>
+
+    <!--<div class="space">-->
+
+  </div>
+  </div>
+
+  <!--The flex container with 2 flex items: side and main-->
+  <div class="flex-container">
+    <div class="side">
+      <div class="home"><a class= "current" href=index.html>Home</a></div><br>
+      <div class="about"><a href=about.html>About Us</a></div><br>
+      <div class="services"><a href=services.html>Services</a></div><br>
+      <div class="contact"><a href=contact.html>Contact</a></div>
     </div>
-     <script>
-         function newDoc() {
-             window.location.assign('searchResults.html');
-         }
-     </script>
+    <div><br><br></div>
+    <div class="main">
 
-  <!--<div class="space">-->
+      <div class="showcase">
+          <h3><br><a href="hospitalfinder.html">Find A Hospital</a></h3>
+      </div>  
+    </div>
 
-</div>
-</div>
+    <!--<div class="feedback">
+      <h3></h3>
+    </div>
+  </div>-->
 
-<!--The flex container with 2 flex items: side and main-->
-<div class="flex-container">
-  <div class="side">
-     <div class="home"><a class= "current" href=index.html>Home</a></div><br>
-     <div class="about"><a href=about.html>About Us</a></div><br>
-     <div class="services"><a href=services.html>Services</a></div><br>
-     <div class="contact"><a href=contact.html>Contact</a></div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <footer>copyright 2020 <span style="color:red">|</span> Hospital Finder</footer>
   </div>
-  <div><br><br></div>
-  <div class="main">
-
-    <div class="showcase">
-        <h3><br><a href="hospitalfinder.html">Find A Hospital</a></h3>
-    </div>  
-  </div>
-
-  <!--<div class="feedback">
-    <h3></h3>
-  </div>
-</div>-->
-
-
-<!-- Footer -->
-<div class="footer">
-  <footer>copyright 2020 <span style="color:red">|</span> Hospital Finder</footer>
-</div>
-
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
 <!--<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>-->
-
 </div>
-
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="js/Authentication.js"></script>
 </body>
 </html>
