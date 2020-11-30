@@ -49,7 +49,7 @@
             </div>
 
             <h1><a href="hospitalfinder.html"><img src ="logo.png" width="50" height="50"></a> COVID-19 <span style="color: red">|</span><span style="color:white"> Hospital Finder</span></h1>      <!-- The form -->
-            <form class="search"  method="get">
+            <form class="search" >
                 <input id="site-search" onclick="newDoc()" type="text" placeholder="Search the site.." name="search">
             </form>
 
@@ -72,7 +72,7 @@
             <div class="contact"><a href=contact.html>Contact</a></div>
         </div>
         <div><br><br></div>
-        <div class="main2">
+        <div class="main-hospitalFinder">
             <!--<input type="number" id= "demo">
          <button type="button" onclick="getdata()">Get</button>
          <p>Result: </p>
@@ -97,29 +97,30 @@
                 <input type="number" id="demo" >
                 <button type="button" onclick="getdata()">Submit</button>
 
-                <p style="text-align:center;"><strong>Metrics Near You</strong></p>
+                <h1><strong>Metrics Near You</strong></h1>
+                <div id="local-metrics">
+                <p>Population: <strong id="cases"></strong></p>
+                <p>Cases: <strong id="population"></strong></p>
+                <p>Deaths: <strong id="deaths"></strong></p>
+                <p>Recovered: <strong id="recovered"></strong></p>
+                </div>
+                <br>
 
-                <p style="text-align:center;">Population: <strong id="cases"></strong></p>
-                <p style="text-align:center;">Cases: <strong id="population"></strong></p>
-                <p style="text-align:center;">Deaths: <strong id="deaths"></strong></p>
-                <p style="text-align:center;">Recovered: <strong id="recovered"></strong></p>
+                <h1><strong>Hospitals Near You</strong></h1>
+                <div id="local-hospitals">
+                <p>Hospital Name: <strong id="hsone"></strong></p>
+                <p>Medical and Surgical Beds : <strong id="nbone"></strong></p>
+                <p>ICU Beds: <strong id="icuone"></strong></p>
 
                 <br>
 
-                <p style="text-align:center;"><strong>Hospitals Near You</strong></p>
-
-                <p style="text-align:center;">Hospital Name: <strong id="hsone"></strong></p>
-                <p style="text-align:center;">Medical and Surgical Beds : <strong id="nbone"></strong></p>
-                <p style="text-align:center;">ICU Beds: <strong id="icuone"></strong></p>
-
-                <br>
-
-                <p style="text-align:center;">Hospital Name: <strong id="hstwo"></strong></p>
-                <p style="text-align:center;">Medical and Surgical Beds : <strong id="nbtwo"></strong></p>
-                <p style="text-align:center;">ICU Beds: <strong id="icutwo"></strong></p>
+                <h3>Hospital Name: <strong id="hstwo"></strong></h3>
+                <p>Medical and Surgical Beds : <strong id="nbtwo"></strong></p>
+                <p>ICU Beds: <strong id="icutwo"></strong></p>
+                </div>
             </div>
 
-            <h3>Nearby Hospitals</h3>
+            <h1>Nearby Hospitals</h1>
             <!--The div element for the map -->
             <div id="map"></div>
         </div>
@@ -137,7 +138,7 @@
     </div>
 </div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=[Your APIKEY]&libraries=places&callback=" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<API KEY HERE>&libraries=places&callback=" async defer></script>
 
 </body>
 </html>
