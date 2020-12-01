@@ -274,7 +274,7 @@ form.search::after {
 /* Main column */
 .main {
   flex: 12;
-  height: 65vh;
+  height: 500px;
   background-color: white;
   background-image: url('images/COVID-19_image.jpg');
   background-repeat: no-repeat;
@@ -404,7 +404,7 @@ form.search::after {
 }
 .main3{
   flex: 12;
-  height: 65vh;
+  height: 500px;
   background-color: white;
   padding-top: 60px;
   background-image: url('images/COVID-19_image.jpg');
