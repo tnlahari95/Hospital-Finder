@@ -32,9 +32,10 @@ const auth = firebase.auth();
 function register(){
   const email = document.getElementById('emailid');
   const password = document.getElementById('password');
-  const promise = auth.createUserWithEmailAndPassword(email.value, password.value).then(function(data){
-    console.log(firebase.user.email)
-    sessionStorage.setItem("currUserEmail", firebase.user.email)
+  auth.createUserWithEmailAndPassword(email.value, password.value).then(function(data){
+    console.log(data.user.email)
+    sessionStorage.setItem("currUserEmail", data.user.email)
+    window.location.replace("hospitalfinder.html")
   }).catch(function(error){
     console.log(error)
   }); 
@@ -43,9 +44,10 @@ function register(){
 function login(){
 var email = document.getElementById('emailid');
 var password = document.getElementById('password');
-const promise = auth.signInWithEmailAndPassword(email.value, password.value).then(function(data){
+auth.signInWithEmailAndPassword(email.value, password.value).then(function(data){
   console.log(data.user.email)
-  sessionStorage.setItem("currUserEmail", firebase.user.email)
+  sessionStorage.setItem("currUserEmail", data.user.email)
+  window.location.replace("hospitalfinder.html")
 }).catch(function(error){
   console.log(error)
 });
