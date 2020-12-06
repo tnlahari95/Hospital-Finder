@@ -287,7 +287,7 @@ form.search::after {
 /* Main column */
 .main {
   flex: 12;
-  height: 650px;
+  height: 560px;
   background-color: white;
   background-image: url('images/COVID-19_image.jpg');
   background-repeat: no-repeat;
@@ -334,7 +334,7 @@ form.search::after {
 
 .main2 {
   flex: 12;
-  height: 650px;
+  height: 560px;
   position:static;
   background-image: url('images/opaque_covid_image.jpg');
   background-repeat: no-repeat;
@@ -417,7 +417,7 @@ form.search::after {
 }
 .main3{
   flex: 12;
-  height: 650px;
+  height: 560px;
   background-color: white;
   padding-top: 60px;
   background-image: url('images/COVID-19_image.jpg');
@@ -636,7 +636,7 @@ display: block;
 
 .contact-section {
   flex: 12;
-  height: 650px;
+  height: 560px;
   background: #f5f5f5;
   padding: 20px 0 20px 0;
   text-align: center;
