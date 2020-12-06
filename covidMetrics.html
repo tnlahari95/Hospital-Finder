@@ -40,11 +40,16 @@
         </p>
       </div>
 
-      <h1><a href="hospitalfinder.html"><img src ="logo.png" width="50" height="50"></a> COVID-19 <span style="color: red">|</span><span style="color:white"> Hospital Finder</span></h1>      <!-- The form -->
-      <form class="search" >
-        <input id="site-search" onclick="newDoc()" type="text" placeholder="Search the site.." name="search">
-      </form>
-
+      <div class="main-title-container">
+        <div class="title-container">
+          <h1><a href="hospitalfinder.html"><img src ="logo.png" width="50" height="50"></a> COVID-19 <span style="color: red">|</span><span style="color:white"> Hospital Finder</span></h1>            <!-- The form -->
+        </div>
+        <div class="search-form-container">
+          <form class="search" >
+            <input id="site-search" onclick="newDoc()" type="text" placeholder="Search the site.." name="search">
+          </form>
+        </div>
+      </div>
     </div>
     <script>
       function newDoc() {
@@ -65,7 +70,7 @@
     </div>
     <div><br><br></div>
     <div class="main" id="main-metrics">
-      <div class="main-header">
+      <div class="metrics-header">
         <h1>Global COVID-19 Metrics</h1>
       </div>
 
@@ -90,7 +95,7 @@
       </table>
       <br>
       <br>
-      <div class="main-header">
+      <div class="metrics-header">
         <h1><br>USA COVID-19 Metrics</h1>
       </div>
       <table >

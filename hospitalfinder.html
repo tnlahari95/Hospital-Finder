@@ -47,12 +47,16 @@
                     <!--<a href="login_register.html">Register</a>-->
                 </p>
             </div>
-
-            <h1><a href="hospitalfinder.html"><img src ="logo.png" width="50" height="50"></a> COVID-19 <span style="color: red">|</span><span style="color:white"> Hospital Finder</span></h1>      <!-- The form -->
-            <form class="search" >
-                <input id="site-search" onclick="newDoc()" type="text" placeholder="Search the site.." name="search">
-            </form>
-
+            <div class="main-title-container">
+                <div class="title-container">
+                    <h1><a href="hospitalfinder.html"><img src ="logo.png" width="50" height="50"></a> COVID-19 <span style="color: red">|</span><span style="color:white"> Hospital Finder</span></h1>            <!-- The form -->
+                </div>
+                <div class="search-form-container">
+                    <form class="search" >
+                        <input id="site-search" onclick="newDoc()" type="text" placeholder="Search the site.." name="search">
+                    </form>
+                </div>
+            </div>
         </div>
         <script>
             function newDoc() {
@@ -114,7 +118,7 @@
 
                 <br>
 
-                <h3>Hospital Name: <strong id="hstwo"></strong></h3>
+                <p>Hospital Name: <strong id="hstwo"></strong></p>
                 <p>Medical and Surgical Beds : <strong id="nbtwo"></strong></p>
                 <p>ICU Beds: <strong id="icutwo"></strong></p>
                 </div>
@@ -138,7 +142,7 @@
     </div>
 </div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=<API KEY HERE>&libraries=places&callback=" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDksZwJfUHFavnWOO5KZYXcJdZrtX1hCXw&libraries=places&callback=" async defer></script>
 <script src="js/Authentication.js"></script>
 
 </body>
