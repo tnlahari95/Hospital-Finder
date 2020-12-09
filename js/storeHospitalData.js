@@ -23,20 +23,26 @@ $(document).ready(function () {
     var hospNameID = ""
     var bedNumID = ""
     var ICUNumID = ""
+    var buttonID = ''
 
     if(id === 1) {
       hospNameID = "#hsone"
       bedNumID = "#nbone"
       ICUNumID = "#icuone"
+      buttonID = "#hospitalone"
     } else if(id === 2) {
       hospNameID = "#hstwo"
       bedNumID = "#nbtwo"
       ICUNumID = "#icutwo"
+      buttonID = "#hospitaltwo"
     }
 
      hospName = $(hospNameID).val()
      bedNum = $(bedNumID).val()
      ICUNum = $(ICUNumID).val()
+     $(buttonID).val("Saved")
+     $(buttonID).disabled = true
+
 
      currUser = sessionStorage.getItem("currUserEmail")
 
@@ -51,4 +57,10 @@ $(document).ready(function () {
         data: dataObj
      })
   }
+
+  $(".storeButton").click(function(){
+    console.log("clicked")
+    var buttonID = $(this).data("id")
+    storeHospital(buttonID)
+  })
 })
