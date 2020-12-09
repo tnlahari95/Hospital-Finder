@@ -77,50 +77,41 @@
         </div>
         <div><br><br></div>
         <div class="main-hospitalFinder">
-            <!--<input type="number" id= "demo">
-         <button type="button" onclick="getdata()">Get</button>
-         <p>Result: </p>
-         <p>Population: <strong id ="demo2"></p>-->
-            <div><br></div>
+
+            <br>
             <div class="description">
                 <p>This page gives information on COVID-19 metrics.</p>
                 <p> One can find the COVID-19 data related to Chicago and areas within Chicago on entering the zip code.</p>
             </div>
-            <!-- <div class="metrics">
-            <div class="chicagometrics">
-             <h4>Chicago metrics</h4>
-
-                <p style="text-align:center;">Population: </p>
-                <p style="text-align:center;">Cases: </p>
-                <p style="text-align:center;">Deaths: </p>
-                <p style="text-align:center;">Recovered: </p>
-            </div> -->
+           
             <div><br></div>
             <div class="localmetrics">
                 <label>ZIP Code:</label>
                 <input type="number" id="demo" >
                 <button type="button" onclick="getdata()">Submit</button>
 
-                <h1><strong>Metrics Near You</strong></h1>
-                <div id="local-metrics">
-                <p>Population: <strong id="population"></strong></p>
-                <p>Cases: <strong id="cases"></strong></p>
-                <p>Deaths: <strong id="deaths"></strong></p>
-                <p>Recovered: <strong id="recovered"></strong></p>
-                </div>
-                <br>
+                <div >
+                    <div id="local-metrics">
+                    <h1><strong>Metrics Near You</strong></h1>
+                    <p>Population: <strong id="population"></strong></p>
+                    <p>Cases: <strong id="cases"></strong></p>
+                    <p>Deaths: <strong id="deaths"></strong></p>
+                    <p>Recovered: <strong id="recovered"></strong></p>
+                    </div>
+                    <br>
+                    <div id="local-hospitals">
+                    <h1><strong>Hospitals Near You</strong></h1>
+                    <p>Hospital Name: <strong id="hsone"></strong></p>
+                    <p>Medical and Surgical Beds : <strong id="nbone"></strong></p>
+                    <p>ICU Beds: <strong id="icuone"></strong></p>
+                    <button class="storeButton" type="button" onclick="storeHospital(1)">Save</button>
+                    <br>
 
-                <h1><strong>Hospitals Near You</strong></h1>
-                <div id="local-hospitals">
-                <p>Hospital Name: <strong id="hsone"></strong></p>
-                <p>Medical and Surgical Beds : <strong id="nbone"></strong></p>
-                <p>ICU Beds: <strong id="icuone"></strong></p>
-
-                <br>
-
-                <p>Hospital Name: <strong id="hstwo"></strong></p>
-                <p>Medical and Surgical Beds : <strong id="nbtwo"></strong></p>
-                <p>ICU Beds: <strong id="icutwo"></strong></p>
+                    <p>Hospital Name: <strong id="hstwo"></strong></p>
+                    <p>Medical and Surgical Beds : <strong id="nbtwo"></strong></p>
+                    <p>ICU Beds: <strong id="icutwo"></strong></p>
+                    <button class="storeButton" type="button" onclick="storeHospital(2)">Save</button>
+                    </div>
                 </div>
             </div>
 
@@ -141,9 +132,10 @@
         <footer>copyright 2020 <span style="color:red">|</span> Hospital Finder</footer>
     </div>
 </div>
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=[YOUR API KEY HERE]libraries=places&callback=" async defer></script>
-<script src="js/Authentication.js"></script>
+<script src="js/authentication.js"></script>
+<script src="js/storeHospitalData.js"></script>
 
 </body>
 </html>
